@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastSewa Land | Secure Property Verification</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="land.css">
+</head>
+<body>
+
+    <nav class="land-navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-map-marked-alt"></i><li><a href="index.html">FastSewa <span>Land</span></a> </li>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#search-records">Search Records</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#verify-doc" class="nav-btn">Verify Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="land-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="trust-badge"><i class="fas fa-shield-alt"></i> 100% Legal Verification</span>
+            <h1>Don't Buy Trouble. <br><span>Verify Before You Buy.</span></h1>
+            <p>We check government records, on-site possession, and legal disputes to ensure your land investment is safe.</p>
+            
+            <div class="hero-btns">
+                <a href="#search-records" class="btn-primary">Check Land Record</a>
+                <a href="#verify-doc" class="btn-secondary">Upload Documents</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="search-records" class="section-pad search-section">
+        <div class="container">
+            <div class="search-box-wrapper">
+                <div class="search-header">
+                    <h2><i class="fas fa-search-location"></i> Instant Land Record Check</h2>
+                    <p>Access Bhulekh/Land Records across states instantly.</p>
+                </div>
+                
+                <div class="search-form">
+                    <div class="input-group">
+                        <label>State</label>
+                        <select id="stateSelect">
+                            <option>Bihar</option>
+                            <option>Uttar Pradesh</option>
+                            <option>Jharkhand</option>
+                            <option>Maharashtra</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>District</label>
+                        <select>
+                            <option>Patna</option>
+                            <option>Gaya</option>
+                            <option>Muzaffarpur</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Plot / Khasra No.</label>
+                        <input type="text" id="plotInput" placeholder="e.g. 420/A">
+                    </div>
+                    <button class="btn-search" onclick="searchLand()">Search Records</button>
+                </div>
+
+                <div id="searchResult" class="search-result" style="display: none;">
+                    <div class="loader" id="loader"></div>
+                    <div class="result-data" id="resultData" style="display: none;">
+                        <div class="status-success"><i class="fas fa-check-circle"></i> Record Found</div>
+                        <table>
+                            <tr><td>Owner Name:</td><td><strong>Rajesh Kumar Singh</strong></td></tr>
+                            <tr><td>Area:</td><td>1200 Sq. Ft.</td></tr>
+                            <tr><td>Type:</td><td>Residential / Plot</td></tr>
+                            <tr><td>Dispute Status:</td><td class="text-green">Clear (No Court Stay)</td></tr>
+                        </table>
+                        <button class="btn-full-report">Download Full Report (PDF)</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section-pad bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Comprehensive Verification</h2>
+                <p>We go beyond just online records.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="svc-card">
+                    <div class="icon-box"><i class="fas fa-file-contract"></i></div>
+                    <h3>Title Verification</h3>
+                    <p>Tracing ownership history for the last 30 years to ensure clean title.</p>
+                </div>
+                <div class="svc-card">
+                    <div class="icon-box"><i class="fas fa-ruler-combined"></i></div>
+                    <h3>Physical Survey</h3>
+                    <p>On-ground measurement to check actual area vs. documented area.</p>
+                </div>
+                <div class="svc-card">
+                    <div class="icon-box"><i class="fas fa-gavel"></i></div>
+                    <h3>Litigation Check</h3>
+                    <p>Checking local courts for any pending cases or stay orders on the land.</p>
+                </div>
+                <div class="svc-card">
+                    <div class="icon-box"><i class="fas fa-hand-holding-usd"></i></div>
+                    <h3>Market Valuation</h3>
+                    <p>Getting the true government circle rate and market value estimation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="verify-doc" class="section-pad">
+        <div class="container split-container">
+            <div class="left-content">
+                <h2>Get an Expert Legal Opinion</h2>
+                <p>Upload your registry papers, agreements, or maps. Our legal team will analyze them and give you a "Safe to Buy" score.</p>
+                
+                <ul class="benefit-list">
+                    <li><i class="fas fa-check"></i> 48-Hour Turnaround</li>
+                    <li><i class="fas fa-check"></i> Lawyer Certified Report</li>
+                    <li><i class="fas fa-check"></i> Hidden Clauses Detection</li>
+                </ul>
+            </div>
+
+            <div class="right-form">
+                <div class="upload-card">
+                    <h3>Request Verification</h3>
+                    <form onsubmit="event.preventDefault(); submitRequest();">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Mobile Number" required>
+                        </div>
+                        
+                        <div class="drop-zone" id="dropZone">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <p>Drag & drop property documents here</p>
+                            <small>or click to browse (PDF, JPG)</small>
+                            <input type="file" id="fileInput" hidden>
+                        </div>
+                        <div id="fileName" class="file-name"></div>
+
+                        <button type="submit" class="btn-submit">Submit for Review</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="trust-bar">
+        <div class="container trust-grid">
+            <div class="trust-item">
+                <h2>5000+</h2>
+                <p>Lands Verified</p>
+            </div>
+            <div class="trust-item">
+                <h2>₹200Cr+</h2>
+                <p>Investment Saved</p>
+            </div>
+            <div class="trust-item">
+                <h2>50+</h2>
+                <p>Legal Experts</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 FastSewa Land Services. Built for Trust.</p>
+    </footer>
+
+    <script src="land.js"></script>
+</body>
+</html>

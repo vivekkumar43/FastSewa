@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastSewa Repair | Home Maintenance Experts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="repair.css">
+</head>
+<body>
+
+    <nav class="repair-navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-tools"></i> FastSewa <span>Repair</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#estimator">Rate Card</a></li>
+                <li><a href="#book-now" class="nav-btn">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="repair-hero">
+        <div class="hero-content">
+            <div class="badge-urgent"><i class="fas fa-bolt"></i> 60-Min Emergency Service Available</div>
+            <h1>Broken? Leaking? <br><span>We Fix It Instantly.</span></h1>
+            <p>Expert Electricians, Plumbers, and Carpenters at your doorstep. Verified professionals with a 30-day service warranty.</p>
+            
+            <div class="job-search">
+                <i class="fas fa-search"></i>
+                <input type="text" id="serviceSearch" placeholder="What needs fixing? (e.g., AC, Fan, Tap)">
+                <button onclick="scrollToServices()">Find Expert</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://img.freepik.com/free-photo/repairman-doing-air-conditioner-service_1303-26555.jpg" alt="Repairman">
+        </div>
+    </header>
+
+    <section id="services" class="section-pad">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Expertise</h2>
+                <p>Select a category to see standard rates.</p>
+            </div>
+            
+            <div class="repair-grid">
+                <div class="repair-card" onclick="selectCategory('Electrical')">
+                    <div class="icon-circle orange"><i class="fas fa-plug"></i></div>
+                    <h3>Electrical</h3>
+                    <p>Wiring, Switches, Fans</p>
+                </div>
+                <div class="repair-card" onclick="selectCategory('Plumbing')">
+                    <div class="icon-circle blue"><i class="fas fa-faucet"></i></div>
+                    <h3>Plumbing</h3>
+                    <p>Leaks, Taps, Pipes</p>
+                </div>
+                <div class="repair-card" onclick="selectCategory('AC')">
+                    <div class="icon-circle cyan"><i class="fas fa-snowflake"></i></div>
+                    <h3>AC Service</h3>
+                    <p>Repair, Gas, Cleaning</p>
+                </div>
+                <div class="repair-card" onclick="selectCategory('Carpentry')">
+                    <div class="icon-circle brown"><i class="fas fa-hammer"></i></div>
+                    <h3>Carpentry</h3>
+                    <p>Furniture, Doors, Locks</p>
+                </div>
+                <div class="repair-card" onclick="selectCategory('Appliance')">
+                    <div class="icon-circle dark"><i class="fas fa-tv"></i></div>
+                    <h3>Appliances</h3>
+                    <p>TV, Fridge, Washing Machine</p>
+                </div>
+                <div class="repair-card" onclick="selectCategory('Painting')">
+                    <div class="icon-circle yellow"><i class="fas fa-paint-roller"></i></div>
+                    <h3>Painting</h3>
+                    <p>Touchups, Full Home</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="estimator" class="estimator-section">
+        <div class="container">
+            <div class="estimator-box">
+                <div class="est-left">
+                    <h2><i class="fas fa-calculator"></i> Smart Price Estimator</h2>
+                    <p>Get an instant quote before you book. No hidden charges.</p>
+                    
+                    <div class="est-controls">
+                        <label>Select Service</label>
+                        <select id="estService" onchange="calculateTotal()">
+                            <option value="0" disabled selected>Choose a job...</option>
+                            <option value="199">Fan Installation (₹199)</option>
+                            <option value="149">Switch Repair (₹149)</option>
+                            <option value="599">AC Deep Cleaning (₹599)</option>
+                            <option value="299">Tap Leakage Fix (₹299)</option>
+                            <option value="999">Washing Machine Check (₹999)</option>
+                        </select>
+
+                        <label>Quantity / Units</label>
+                        <div class="qty-control">
+                            <button onclick="changeQty(-1)">-</button>
+                            <span id="qtyDisplay">1</span>
+                            <button onclick="changeQty(1)">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="est-right">
+                    <div class="price-display">
+                        <small>Estimated Total</small>
+                        <h3 id="totalPrice">₹0</h3>
+                        <p class="tax-note">+ 5% GST Applicable</p>
+                    </div>
+                    <button class="btn-book-est" onclick="transferToBooking()">Book This Service</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="book-now" class="section-pad bg-light">
+        <div class="container booking-wrapper">
+            <div class="booking-info">
+                <h2>Schedule a Visit</h2>
+                <ul class="features-list">
+                    <li><i class="fas fa-check-circle"></i> 30-Day Post-Service Warranty</li>
+                    <li><i class="fas fa-check-circle"></i> Background Verified Partners</li>
+                    <li><i class="fas fa-check-circle"></i> Transparent Pricing</li>
+                </ul>
+                <div class="support-box">
+                    <i class="fas fa-headset"></i>
+                    <div>
+                        <strong>Need Help?</strong>
+                        <p>Call: +91 82757 23755</p>
+                    </div>
+                </div>
+            </div>
+
+            <form class="booking-form" onsubmit="event.preventDefault(); confirmBooking();">
+                <h3>Contact Details</h3>
+                
+                <div class="form-group">
+                    <label>Selected Service</label>
+                    <input type="text" id="finalService" value="Not Selected" readonly style="background:#f1f5f9;">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" placeholder="Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input type="tel" placeholder="Mobile Number" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Address</label>
+                    <textarea placeholder="House No, Area, City" rows="2" required></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Date</label>
+                        <input type="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Time Slot</label>
+                        <select>
+                            <option>Morning (9AM - 12PM)</option>
+                            <option>Afternoon (12PM - 4PM)</option>
+                            <option>Evening (4PM - 8PM)</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="urgent-toggle">
+                    <input type="checkbox" id="urgentCheck">
+                    <label for="urgentCheck">
+                        <span class="bolt-icon"><i class="fas fa-bolt"></i></span>
+                        <span>Request Urgent (Within 60 Mins)</span>
+                        <small>+ ₹100 extra charge</small>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn-confirm">Confirm Booking</button>
+                <div id="successMsg" class="success-msg"></div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 FastSewa Repair & Maintenance.</p>
+    </footer>
+
+    <script src="repair.js"></script>
+</body>
+</html>
