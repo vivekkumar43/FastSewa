@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastSewa Medical | Premium Health Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="medical.css">
+</head>
+<body>
+
+    <nav class="med-navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-heartbeat"></i> FastSewa <span>Medical</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#doctors">Find Doctors</a></li>
+                <li><a href="#ai-assistant">AI Help</a></li>
+                <li><a href="#book-final" class="nav-btn">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="med-hero">
+        <div class="hero-content">
+            <span class="badge">24/7 Online Support</span>
+            <h1>World-Class Healthcare <br><span>At Your Doorstep</span></h1>
+            <p>Experience the future of medical assistance. AI-powered diagnosis, instant doctor booking, and medicine delivery.</p>
+            
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="dynamicSearch" placeholder="Search for doctors...">
+                <button>Find</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://img.freepik.com/free-photo/portrait-successful-mid-adult-doctor-with-crossed-arms_1262-12865.jpg" alt="Doctor">
+            <div class="floating-card">
+                <i class="fas fa-user-md"></i>
+                <div>
+                    <strong>50+ Specialists</strong>
+                    <small>Online Now</small>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="services" class="section-pad">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Medical Departments</h2>
+                <p>Comprehensive care for you and your family.</p>
+            </div>
+            <div class="services-grid">
+                <div class="svc-card">
+                    <div class="icon-bg blue"><i class="fas fa-heart-pulse"></i></div>
+                    <h3>Cardiology</h3>
+                    <p>Expert heart care, ECGs, and surgeries by top cardiologists.</p>
+                    <a href="#book-final" onclick="bookDoctor('Any Specialist', 'Cardiology')">Book Consult <i class="fas fa-chevron-right"></i></a>
+                </div>
+                <div class="svc-card">
+                    <div class="icon-bg green"><i class="fas fa-tooth"></i></div>
+                    <h3>Dental Care</h3>
+                    <p>Root canals, implants, and cosmetic dentistry services.</p>
+                    <a href="#book-final" onclick="bookDoctor('Any Specialist', 'Dental')">Book Consult <i class="fas fa-chevron-right"></i></a>
+                </div>
+                <div class="svc-card">
+                    <div class="icon-bg purple"><i class="fas fa-brain"></i></div>
+                    <h3>Neurology</h3>
+                    <p>Treatment for migraines, nerve disorders, and brain health.</p>
+                    <a href="#book-final" onclick="bookDoctor('Any Specialist', 'Neurology')">Book Consult <i class="fas fa-chevron-right"></i></a>
+                </div>
+                <div class="svc-card">
+                    <div class="icon-bg orange"><i class="fas fa-baby"></i></div>
+                    <h3>Pediatrics</h3>
+                    <p>Specialized care for infants, children, and adolescents.</p>
+                    <a href="#book-final" onclick="bookDoctor('Any Specialist', 'Pediatrics')">Book Consult <i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="doctors" class="section-pad bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Top Specialists</h2>
+                <div class="filter-pills">
+                    <button class="pill active" onclick="filterDocs('All')">All</button>
+                    <button class="pill" onclick="filterDocs('Cardiologist')">Cardio</button>
+                    <button class="pill" onclick="filterDocs('Dentist')">Dental</button>
+                    <button class="pill" onclick="filterDocs('General')">General</button>
+                </div>
+            </div>
+            <div id="doctorGrid" class="doctor-grid">
+                </div>
+        </div>
+    </section>
+
+    <section id="ai-assistant" class="ai-wrapper">
+        <div class="container ai-flex">
+            <div class="ai-info">
+                <h2><i class="fas fa-robot"></i> Not feeling well?</h2>
+                <p>Chat with <strong>FastSewa AI</strong>. Describe your symptoms, and it will suggest the right specialist and even book the appointment for you.</p>
+                <ul class="check-list">
+                    <li><i class="fas fa-check-circle"></i> Instant Analysis</li>
+                    <li><i class="fas fa-check-circle"></i> 24/7 Availability</li>
+                    <li><i class="fas fa-check-circle"></i> Private & Secure</li>
+                </ul>
+            </div>
+            <div class="chat-box">
+                <div class="chat-history" id="chatHistory">
+                    <div class="msg bot">Hi! Tell me your symptoms (e.g., "I have a headache").</div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="aiInput" placeholder="Type here...">
+                    <button onclick="sendAiMessage()"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="section-pad bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Emergency Locations</h2>
+                <p>Find the nearest hospitals and clinics in your area.</p>
+            </div>
+            
+            <div class="map-wrapper">
+                <iframe 
+                    width="100%" 
+                    height="500" 
+                    style="border:0; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);" 
+                    loading="lazy" 
+                    allowfullscreen 
+                    src="https://maps.google.com/maps?q=hospitals&t=&z=13&ie=UTF8&iwloc=&output=embed">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="book-final" class="booking-section">
+        <div class="container">
+            <div class="booking-card">
+                <div class="booking-left">
+                    <h3>Confirm Booking</h3>
+                    <p>Secure your slot instantly.</p>
+                    <div class="info-row">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+91 82757 23755</span>
+                    </div>
+                    <div class="info-row">
+                        <i class="fas fa-envelope"></i>
+                        <span>support@fastsewa.com</span>
+                    </div>
+                </div>
+                
+                <div class="booking-right">
+                    <form id="finalForm" onsubmit="event.preventDefault(); bookAppointment();">
+                        
+                        <div class="form-group">
+                            <label>Preferred Doctor</label>
+                            <input type="text" id="selectedDoc" value="Any Available Specialist" readonly style="background-color: #e9ecef; cursor: not-allowed;">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Department</label>
+                            <select id="deptSelect" required onchange="checkAvailability()">
+                                <option value="" disabled selected>Choose Service...</option>
+                                <option value="Cardiology">Cardiology</option>
+                                <option value="Dental">Dental Care</option>
+                                <option value="Neurology">Neurology</option>
+                                <option value="General">General Physician</option>
+                                <option value="Pediatrics">Pediatrics</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Date</label>
+                                <input type="date" id="bookDate" required onchange="checkAvailability()">
+                            </div>
+                            <div class="form-group">
+                                <label>Time Slot</label>
+                                <select id="timeSlot" disabled>
+                                    <option>Select Date First</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Patient Name</label>
+                            <input type="text" id="patName" placeholder="Full Name" required>
+                        </div>
+
+                        <button type="submit" class="btn-submit">Confirm Appointment</button>
+                        <p id="bookingStatus" class="status-msg"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 FastSewa Medical. All Rights Reserved.</p>
+    </footer>
+
+    <script src="medical.js"></script>
+</body>
+</html>

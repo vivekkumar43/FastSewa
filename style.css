@@ -1,0 +1,255 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary: #FF5722; /* Construction Orange */
+    --secondary: #2C3E50; /* Dark Blue */
+    --light: #F4F6F8;
+    --dark: #1a1a1a;
+}
+
+body {
+    background-color: #fff;
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--secondary);
+}
+
+.logo .highlight {
+    color: var(--primary);
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--secondary);
+    margin-left: 2rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    /* Placeholder construction image */
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 1rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.8rem 2rem;
+    background-color: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #e64a19;
+}
+
+/* Services */
+.section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.section-title {
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    color: var(--secondary);
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background: var(--light);
+    padding: 2rem;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card .icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* Calculator */
+.calculator-section {
+    background-color: var(--secondary);
+    color: white;
+}
+
+.calculator-section .section-title {
+    color: white;
+}
+
+.calculator-container {
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    color: var(--dark);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.calc-btn {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.calc-btn:hover {
+    background-color: #e64a19;
+}
+
+.result-box {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #e8f5e9;
+    border: 1px solid #c8e6c9;
+    border-radius: 5px;
+}
+
+.result-box.hidden {
+    display: none;
+}
+
+.result-box .price {
+    font-size: 2rem;
+    color: #2e7d32;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.result-box .note {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* Footer */
+.footer {
+    background-color: #111;
+    color: #888;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none; /* Hidden by default on mobile */
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: white;
+        flex-direction: column;
+        padding: 2rem;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        display: flex; /* Shown when JS toggles it */
+    }
+
+    .nav-links a {
+        margin: 1rem 0;
+        margin-left: 0;
+        text-align: center;
+    }
+}

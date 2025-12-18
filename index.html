@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastSewa BuildNet | Construction & Interiors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">FastSewa <span class="highlight">BuildNet</span></div>
+        <div class="nav-links" id="navLinks">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#calculator">Cost Calculator</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+            ☰
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Building Dreams, Concrete Realities</h1>
+            <p>Your trusted partner for Home Construction, Interior Design, and Redevelopment.</p>
+            <a href="#calculator" class="cta-button">Calculate Your Cost</a>
+        </div>
+    </section>
+
+    <section id="services" class="section">
+        <h2 class="section-title">Our Services</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <div class="icon">🏠</div>
+                <h3>Home Construction</h3>
+                <p>End-to-end residential construction with premium materials and on-time delivery.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon">🎨</div>
+                <h3>Interior Design</h3>
+                <p>Modern, minimalist, and luxury interior solutions tailored to your lifestyle.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon">🏗️</div>
+                <h3>Redevelopment</h3>
+                <p>Transforming old structures into modern architectural marvels safely.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="calculator" class="section calculator-section">
+        <h2 class="section-title">Construction Cost Calculator</h2>
+        <div class="calculator-container">
+            <form id="costForm">
+                <div class="form-group">
+                    <label for="area">Built-up Area (sq. ft)</label>
+                    <input type="number" id="area" placeholder="e.g. 1000" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="quality">Construction Quality</label>
+                    <select id="quality">
+                        <option value="economy">Economy (Basic)</option>
+                        <option value="standard" selected>Standard (Modern)</option>
+                        <option value="premium">Premium (High-End)</option>
+                        <option value="luxury">Luxury (Top Tier)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="floors">Number of Floors</label>
+                    <input type="number" id="floors" value="1" min="1" required>
+                </div>
+
+                <button type="submit" class="calc-btn">Estimate Cost</button>
+            </form>
+
+            <div id="resultBox" class="result-box hidden">
+                <h3>Estimated Cost:</h3>
+                <div class="price" id="totalPrice">₹0</div>
+                <p class="note">*This is an approximate estimation. Actual costs may vary.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+        <h2 class="section-title">Get In Touch</h2>
+        <p>Ready to start your project? Contact FastSewa BuildNet today.</p>
+        <div class="contact-details">
+            <p>📞 +91 98765 43210</p>
+            <p>📧 contact@fastsewa-buildnet.com</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 FastSewa BuildNet. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

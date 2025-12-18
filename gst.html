@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaxEase - GST & Return Filings</title>
+    <link rel="stylesheet" href="gst.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+        <li><a href="1.html">FastSewa</a></li>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#calculator">GST Calculator</a></li> 
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Hassle-Free GST & ITR Filing</h1>
+            <p>Expert assisted tax filing services for individuals and businesses. Secure, fast, and 100% accurate.</p>
+            <a href="#contact" class="btn">Get Started</a>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2 class="section-title">Our Services</h2>
+        <div class="service-container">
+            <div class="service-card">
+                <i class="fas fa-file-invoice-dollar"></i>
+                <h3>GST Registration</h3>
+                <p>New GST registration for proprietorships, partnerships, and private limited companies.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Monthly Return Filing</h3>
+                <p>Timely filing of GSTR-1, GSTR-3B, and annual returns to ensure compliance.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-user-shield"></i>
+                <h3>ITR Filing</h3>
+                <p>Income Tax Returns for salaried employees, freelancers, and business owners.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-calculator"></i>
+                <h3>Tax Planning</h3>
+                <p>Strategic tax saving advice to maximize your returns legally.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+        <h2 class="section-title">Pricing Plans</h2>
+        <div class="pricing-container">
+            <div class="price-card">
+                <h3>Basic ITR</h3>
+                <div class="price">₹999</div>
+                <ul>
+                    <li>Salaried Income</li>
+                    <li>Single Form 16</li>
+                    <li>Interest Income</li>
+                </ul>
+                <a href="#contact" class="btn-outline">Select</a>
+            </div>
+            <div class="price-card highlight">
+                <h3>Business GST</h3>
+                <div class="price">₹2,499<span>/mo</span></div>
+                <ul>
+                    <li>GSTR-1 & 3B Filing</li>
+                    <li>Input Tax Credit check</li>
+                    <li>Dedicated Accountant</li>
+                </ul>
+                <a href="#contact" class="btn">Select</a>
+            </div>
+            <div class="price-card">
+                <h3>Professional</h3>
+                <div class="price">₹1,999</div>
+                <ul>
+                    <li>Freelancers & Consultants</li>
+                    <li>Presumptive Taxation</li>
+                    <li>Balance Sheet Prep</li>
+                </ul>
+                <a href="#contact" class="btn-outline">Select</a>
+            </div>
+        </div>
+    </section>
+    <section id="calculator" class="calculator-section">
+        <h2 class="section-title">GST Calculator</h2>
+        <div class="calculator-container">
+            <div class="input-group">
+                <label for="amount">Amount (₹)</label>
+                <input type="number" id="amount" placeholder="Enter Amount" min="0">
+            </div>
+
+            <div class="tax-slabs">
+                <label>Select Tax Slab:</label>
+                <div class="slab-buttons">
+                    <button class="slab-btn" data-rate="5">5%</button>
+                    <button class="slab-btn" data-rate="12">12%</button>
+                    <button class="slab-btn active" data-rate="18">18%</button>
+                    <button class="slab-btn" data-rate="28">28%</button>
+                </div>
+            </div>
+
+            <div class="tax-type">
+                <label>Tax Type:</label>
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="taxType" value="exclusive" checked>
+                        GST Exclusive (Add GST)
+                    </label>
+                    <label>
+                        <input type="radio" name="taxType" value="inclusive">
+                        GST Inclusive (Remove GST)
+                    </label>
+                </div>
+            </div>
+
+            <button onclick="calculateGST()" class="btn calc-btn">Calculate</button>
+
+            <div id="result" class="result-box hidden">
+    <div class="result-row">
+        <span>Net Amount:</span>
+        <span id="res-net">₹0</span>
+    </div>
+    <div class="result-row">
+        <span>GST Amount:</span>
+        <span id="res-gst">₹0</span>
+    </div>
+    <div class="result-row total">
+        <span>Total Amount:</span>
+        <span id="res-total">₹0</span>
+    </div>
+    
+    <button onclick="downloadPDF()" class="btn-outline" style="width:100%; margin-top:15px;">
+        <i class="fas fa-file-pdf"></i> Download PDF
+    </button>
+</div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <p><i class="fas fa-phone"></i> +91 xxxxxxxxx</p>
+                <p><i class="fas fa-envelope"></i> Fastsewa@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> B Hub Gandhi Maidan Patna</p>
+            </div>
+            <form class="contact-form" id="consultationForm">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <select id="serviceType">
+                    <option value="GST">GST Services</option>
+                    <option value="ITR">ITR Filing</option>
+                    <option value="Consultation">General Consultation</option>
+                </select>
+                <textarea id="message" rows="5" placeholder="How can we help you?" required></textarea>
+                <button type="submit" class="btn">Send Request</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 FastSewa. All Rights Reserved.</p>
+    </footer>
+
+    <script src="gst.js"></script>
+</body>
+</html>
