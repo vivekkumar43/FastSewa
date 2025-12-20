@@ -1,0 +1,1908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fastsewa Construction - Project-Based Construction Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0a4a7a;
+            --secondary: #f4a261;
+            --accent: #2a9d8f;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --light-gray: #e9ecef;
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: #fff;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            display: inline-block;
+            position: relative;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--secondary);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            background-color: var(--secondary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background-color: #e76f51;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            background-color: #08345c;
+        }
+
+        .btn-large {
+            padding: 18px 45px;
+            font-size: 1.1rem;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-icon {
+            color: var(--primary);
+            font-size: 2rem;
+            margin-right: 10px;
+        }
+
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .logo-text span {
+            color: var(--secondary);
+        }
+
+        .nav-menu {
+            display: flex;
+        }
+
+        .nav-menu li {
+            margin-left: 30px;
+        }
+
+        .nav-menu a {
+            font-weight: 500;
+            position: relative;
+            padding: 5px 0;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary);
+            transition: var(--transition);
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(10, 74, 122, 0.85), rgba(10, 74, 122, 0.9)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            color: white;
+            margin-top: 70px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            max-width: 600px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        /* Project Types Section */
+        .project-types {
+            background-color: var(--light);
+        }
+
+        .project-types-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .project-type-card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-top: 5px solid var(--primary);
+        }
+
+        .project-type-card:hover {
+            transform: translateY(-10px);
+            border-top-color: var(--secondary);
+        }
+
+        .project-type-icon {
+            font-size: 3.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .project-type-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .project-type-card p {
+            color: var(--gray);
+            margin-bottom: 25px;
+        }
+
+        /* Process Section */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 15px;
+            margin-top: 50px;
+            position: relative;
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 50px;
+            right: 50px;
+            height: 4px;
+            background-color: var(--light-gray);
+            z-index: 1;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 0 auto 20px;
+            transition: var(--transition);
+        }
+
+        .process-step.active .step-number {
+            background-color: var(--secondary);
+            transform: scale(1.1);
+        }
+
+        .step-title {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        /* Cost Calculator Section */
+        .calculator {
+            background-color: var(--light);
+        }
+
+        .calculator-container {
+            background-color: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: var(--shadow);
+        }
+
+        .calculator-row {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .calculator-input {
+            margin-bottom: 25px;
+        }
+
+        .calculator-input label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .calculator-input input,
+        .calculator-input select {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid var(--light-gray);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .calculator-input input:focus,
+        .calculator-input select:focus {
+            border-color: var(--primary);
+            outline: none;
+        }
+
+        .smart-options {
+            margin: 30px 0;
+            padding: 25px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            border-left: 5px solid var(--accent);
+        }
+
+        .smart-options h4 {
+            color: var(--accent);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+        }
+
+        .checkbox-item input {
+            margin-right: 10px;
+            width: 20px;
+            height: 20px;
+        }
+
+        .calculator-results {
+            background-color: var(--primary);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        .results-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .results-total {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-top: 10px;
+        }
+
+        /* Project Form Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            padding: 20px;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .project-form-modal {
+            background-color: white;
+            border-radius: 15px;
+            width: 100%;
+            max-width: 700px;
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: 40px;
+            position: relative;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .modal-header h3 {
+            color: var(--primary);
+            font-size: 1.8rem;
+        }
+
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--gray);
+            transition: var(--transition);
+        }
+
+        .close-modal:hover {
+            color: var(--secondary);
+        }
+
+        .form-step {
+            display: none;
+        }
+
+        .form-step.active {
+            display: block;
+        }
+
+        .step-indicator {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .step-indicator::before {
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: var(--light-gray);
+            z-index: 1;
+        }
+
+        .step {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            flex: 1;
+        }
+
+        .step-circle {
+            width: 30px;
+            height: 30px;
+            background-color: var(--light-gray);
+            color: var(--gray);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            margin: 0 auto 10px;
+            transition: var(--transition);
+        }
+
+        .step.active .step-circle {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .step.completed .step-circle {
+            background-color: var(--secondary);
+            color: white;
+        }
+
+        .step-label {
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        .step.active .step-label {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid var(--light-gray);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary);
+            outline: none;
+        }
+
+        .form-options {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .form-option {
+            padding: 20px;
+            border: 2px solid var(--light-gray);
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .form-option:hover {
+            border-color: var(--primary);
+        }
+
+        .form-option.selected {
+            border-color: var(--primary);
+            background-color: rgba(10, 74, 122, 0.05);
+        }
+
+        .form-option i {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .form-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--light-gray);
+        }
+
+        /* Project Status Section */
+        .status-tracker {
+            background-color: var(--light);
+        }
+
+        .status-container {
+            background-color: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: var(--shadow);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--light-gray);
+        }
+
+        .project-id {
+            background-color: var(--primary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .status-flow {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin: 50px 0;
+        }
+
+        .status-flow::before {
+            content: '';
+            position: absolute;
+            top: 25px;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background-color: var(--light-gray);
+            z-index: 1;
+        }
+
+        .status-step {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            flex: 1;
+        }
+
+        .status-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--light-gray);
+            color: var(--gray);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin: 0 auto 15px;
+            transition: var(--transition);
+        }
+
+        .status-step.active .status-icon {
+            background-color: var(--primary);
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .status-step.completed .status-icon {
+            background-color: var(--secondary);
+            color: white;
+        }
+
+        .status-label {
+            font-weight: 600;
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .status-step.active .status-label {
+            color: var(--primary);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+        }
+
+        .footer-col h3 {
+            color: white;
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--secondary);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--secondary);
+            padding-left: 5px;
+            transition: var(--transition);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .project-types-container,
+            .footer-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .process-steps {
+                grid-template-columns: repeat(3, 2fr);
+                gap: 30px;
+            }
+            
+            .process-steps::before {
+                display: none;
+            }
+            
+            .calculator-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .checkbox-group {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background-color: white;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding-top: 50px;
+                transition: var(--transition);
+            }
+            
+            .nav-menu.active {
+                left: 0;
+            }
+            
+            .nav-menu li {
+                margin: 15px 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .project-types-container,
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .process-steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .status-flow {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 30px;
+            }
+            
+            .status-flow::before {
+                display: none;
+            }
+            
+            .status-step {
+                display: flex;
+                align-items: center;
+                text-align: left;
+                width: 100%;
+            }
+            
+            .status-icon {
+                margin: 0 20px 0 0;
+                flex-shrink: 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section {
+                padding: 50px 0;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .checkbox-group {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-options {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-building"></i>
+                </div>
+                <div class="logo-text">FAST<span>SEWA</span> CONSTRUCTION</div>
+            </a>
+            
+            <div class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Project Types</a></li>
+                <li><a href="#process">Our Process</a></li>
+                <li><a href="#calculator">Cost Calculator</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Build Your Dream Project with Confidence</h1>
+                <p>Fastsewa Construction manages your construction as a complete project - not just a service. From planning to handover, we guide you through every step with transparency and expertise.</p>
+                
+                <div class="hero-buttons">
+                    <button class="btn btn-large" id="startProjectBtn">
+                        <i class="fas fa-play-circle"></i> Start Your Construction Project
+                    </button>
+                    <a href="#calculator" class="btn btn-primary btn-large">
+                        <i class="fas fa-calculator"></i> Estimate Cost
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Types Section -->
+    <section class="section project-types" id="projects">
+        <div class="container">
+            <div class="section-title">
+                <h2>Choose Your Construction Project Type</h2>
+                <p>We manage different types of construction projects with specialized expertise</p>
+            </div>
+            
+            <div class="project-types-container">
+                <div class="project-type-card">
+                    <div class="project-type-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>New Home Construction</h3>
+                    <p>Build your dream home from scratch with customized design, quality materials, and complete project management.</p>
+                    <button class="btn start-project-btn" data-project-type="home">Start Home Project</button>
+                </div>
+                
+                <div class="project-type-card">
+                    <div class="project-type-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Commercial Construction</h3>
+                    <p>Office buildings, retail spaces, and commercial complexes with focus on functionality, compliance, and ROI.</p>
+                    <button class="btn start-project-btn" data-project-type="commercial">Start Commercial Project</button>
+                </div>
+                
+                <div class="project-type-card">
+                    <div class="project-type-icon">
+                        <i class="fas fa-hammer"></i>
+                    </div>
+                    <h3>Renovation & Extension</h3>
+                    <p>Transform or expand your existing property with structural modifications, modern upgrades, and value addition.</p>
+                    <button class="btn start-project-btn" data-project-type="renovation">Start Renovation Project</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="section" id="process">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our 6-Step Construction Process</h2>
+                <p>Every construction project follows this clear, transparent workflow</p>
+            </div>
+            
+            <div class="process-steps">
+                <div class="process-step active">
+                    <div class="step-number">1</div>
+                    <div class="step-title">Enquiry Received</div>
+                    <p>Project ID generated, initial assessment</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-title">Site Visit</div>
+                    <p>Detailed site analysis & measurements</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-title">Design Discussion</div>
+                    <p>Architectural plans & 3D visualization</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-title">Estimation</div>
+                    <p>Detailed cost breakdown & timeline</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <div class="step-title">Execution</div>
+                    <p>Construction with quality checks</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">6</div>
+                    <div class="step-title">Handover</div>
+                    <p>Final inspection & project completion</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cost Calculator Section -->
+    <section class="section calculator" id="calculator">
+        <div class="container">
+            <div class="section-title">
+                <h2>Construction Cost Calculator</h2>
+                <p>Get an approximate cost range for your construction project</p>
+            </div>
+            
+            <div class="calculator-container">
+                <div class="calculator-row">
+                    <div class="calculator-input">
+                        <label for="projectTypeCalc">Project Type</label>
+                        <select id="projectTypeCalc">
+                            <option value="home">New Home Construction</option>
+                            <option value="commercial">Commercial Building</option>
+                            <option value="renovation">Renovation/Extension</option>
+                        </select>
+                    </div>
+                    
+                    <div class="calculator-input">
+                        <label for="constructionType">Construction Quality</label>
+                        <select id="constructionType">
+                            <option value="economy">Economy (₹1,200-1,500/sq ft)</option>
+                            <option value="standard" selected>Standard (₹1,500-2,000/sq ft)</option>
+                            <option value="premium">Premium (₹2,000-2,800/sq ft)</option>
+                            <option value="luxury">Luxury (₹2,800-4,000+/sq ft)</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="calculator-row">
+                    <div class="calculator-input">
+                        <label for="plotArea">Plot Area (in sq ft)</label>
+                        <input type="number" id="plotArea" min="100" max="100000" value="1000">
+                    </div>
+                    
+                    <div class="calculator-input">
+                        <label for="floors">Number of Floors</label>
+                        <select id="floors">
+                            <option value="1">Ground + 1 Floor</option>
+                            <option value="2" selected>Ground + 2 Floors</option>
+                            <option value="3">Ground + 3 Floors</option>
+                            <option value="4">Ground + 4 Floors</option>
+                            <option value="5">Ground + 5 Floors</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="smart-options">
+                    <h4><i class="fas fa-home-automation"></i> Smart Home Automation (Optional Add-ons)</h4>
+                    <p>Select optional smart features for your construction project</p>
+                    
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="smartLights" value="smartLights">
+                            <label for="smartLights">Smart Lighting System</label>
+                        </div>
+                        
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="smartFans" value="smartFans">
+                            <label for="smartFans">Smart Fans & AC Control</label>
+                        </div>
+                        
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="smartLocks" value="smartLocks">
+                            <label for="smartLocks">Smart Door Locks</label>
+                        </div>
+                        
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="smartSecurity" value="smartSecurity">
+                            <label for="smartSecurity">Smart Security System</label>
+                        </div>
+                        
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="smartCurtains" value="smartCurtains">
+                            <label for="smartCurtains">Automated Curtains</label>
+                        </div>
+                        
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="smartHub" value="smartHub">
+                            <label for="smartHub">Central Smart Hub</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="btn btn-large" id="calculateCostBtn" style="width: 100%;">
+                    <i class="fas fa-calculator"></i> Calculate Estimated Cost
+                </button>
+                
+                <div class="calculator-results" id="costResults" style="display: none;">
+                    <h3>Estimated Construction Cost</h3>
+                    
+                    <div class="results-row">
+                        <span>Construction Area:</span>
+                        <span id="resultArea">0 sq ft</span>
+                    </div>
+                    
+                    <div class="results-row">
+                        <span>Cost per sq ft:</span>
+                        <span id="resultRate">₹0</span>
+                    </div>
+                    
+                    <div class="results-row">
+                        <span>Basic Construction Cost:</span>
+                        <span id="resultBasic">₹0</span>
+                    </div>
+                    
+                    <div class="results-row">
+                        <span>Smart Features Add-on:</span>
+                        <span id="resultSmart">₹0</span>
+                    </div>
+                    
+                    <div class="results-row">
+                        <span>Approx Additional Costs (20%):</span>
+                        <span id="resultAdditional">₹0</span>
+                    </div>
+                    
+                    <div class="results-row">
+                        <span><strong>Total Estimated Range:</strong></span>
+                        <span class="results-total" id="resultTotal">₹0 - ₹0</span>
+                    </div>
+                    
+                    <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.9;">
+                        <i class="fas fa-info-circle"></i> Note: This is an approximate estimate. Final cost will be determined after site visit and detailed planning.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Status Demo Section -->
+    <section class="section status-tracker">
+        <div class="container">
+            <div class="section-title">
+                <h2>Project Status Tracking</h2>
+                <p>See how your construction project progresses through different stages</p>
+            </div>
+            
+            <div class="status-container">
+                <div class="project-header">
+                    <div>
+                        <h3>Sample Project: Sharma Residence</h3>
+                        <p>New Home Construction | 2,000 sq ft | Gurgaon</p>
+                    </div>
+                    <div class="project-id">PROJ-FS-2024-001</div>
+                </div>
+                
+                <div class="status-flow">
+                    <div class="status-step completed">
+                        <div class="status-icon">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <div class="status-label">Enquiry Received</div>
+                        <div class="status-date">15 Oct 2024</div>
+                    </div>
+                    
+                    <div class="status-step active">
+                        <div class="status-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="status-label">Site Visit Pending</div>
+                        <div class="status-date">Current Stage</div>
+                    </div>
+                    
+                    <div class="status-step">
+                        <div class="status-icon">
+                            <i class="fas fa-pencil-ruler"></i>
+                        </div>
+                        <div class="status-label">Estimation Pending</div>
+                        <div class="status-date">Next Stage</div>
+                    </div>
+                    
+                    <div class="status-step">
+                        <div class="status-icon">
+                            <i class="fas fa-hard-hat"></i>
+                        </div>
+                        <div class="status-label">Work In Progress</div>
+                        <div class="status-date">Upcoming</div>
+                    </div>
+                    
+                    <div class="status-step">
+                        <div class="status-icon">
+                            <i class="fas fa-flag-checkered"></i>
+                        </div>
+                        <div class="status-label">Completed</div>
+                        <div class="status-date">Final Stage</div>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 40px;">
+                    <p>Once you start a project, you'll get a unique Project ID and can track progress in real-time.</p>
+                    <button class="btn btn-large start-project-btn">
+                        <i class="fas fa-rocket"></i> Start Your Own Project
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Form Modal -->
+    <div class="modal-overlay" id="projectModal">
+        <div class="project-form-modal">
+            <div class="modal-header">
+                <h3>Start Your Construction Project</h3>
+                <button class="close-modal" id="closeModalBtn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="step-indicator">
+                <div class="step completed" id="step1Indicator">
+                    <div class="step-circle">1</div>
+                    <div class="step-label">Project Type</div>
+                </div>
+                <div class="step" id="step2Indicator">
+                    <div class="step-circle">2</div>
+                    <div class="step-label">Plot Details</div>
+                </div>
+                <div class="step" id="step3Indicator">
+                    <div class="step-circle">3</div>
+                    <div class="step-label">Requirements</div>
+                </div>
+                <div class="step" id="step4Indicator">
+                    <div class="step-circle">4</div>
+                    <div class="step-label">Contact Info</div>
+                </div>
+            </div>
+            
+            <form id="projectForm">
+                <!-- Step 1: Project Type -->
+                <div class="form-step active" id="step1">
+                    <h4>What type of construction project do you need?</h4>
+                    <p>Select the category that best describes your requirement</p>
+                    
+                    <div class="form-options">
+                        <div class="form-option" data-value="home">
+                            <i class="fas fa-home"></i>
+                            <h5>New Home Construction</h5>
+                            <p>Building a new house from scratch</p>
+                        </div>
+                        
+                        <div class="form-option" data-value="commercial">
+                            <i class="fas fa-building"></i>
+                            <h5>Commercial Construction</h5>
+                            <p>Office, shop, or commercial building</p>
+                        </div>
+                        
+                        <div class="form-option" data-value="renovation">
+                            <i class="fas fa-hammer"></i>
+                            <h5>Renovation / Extension</h5>
+                            <p>Modifying or expanding existing property</p>
+                        </div>
+                        
+                        <div class="form-option" data-value="other">
+                            <i class="fas fa-question-circle"></i>
+                            <h5>Other Construction</h5>
+                            <p>Factory, warehouse, or special project</p>
+                        </div>
+                    </div>
+                    
+                    <input type="hidden" id="projectType" name="projectType" required>
+                    
+                    <div class="form-navigation">
+                        <div></div>
+                        <button type="button" class="btn next-step" data-next="step2">Next: Plot Details <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                
+                <!-- Step 2: Plot Details -->
+                <div class="form-step" id="step2">
+                    <h4>Tell us about your plot/property</h4>
+                    <p>This helps us understand the scope of your project</p>
+                    
+                    <div class="form-group">
+                        <label>Do you already have a plot/land?</label>
+                        <div class="form-options">
+                            <div class="form-option" data-value="yes">
+                                <i class="fas fa-check-circle"></i>
+                                <h5>Yes, I have a plot</h5>
+                                <p>Ready for construction</p>
+                            </div>
+                            
+                            <div class="form-option" data-value="no">
+                                <i class="fas fa-search"></i>
+                                <h5>No, need to find</h5>
+                                <p>Looking for land/plot</p>
+                            </div>
+                            
+                            <div class="form-option" data-value="existing">
+                                <i class="fas fa-house-user"></i>
+                                <h5>Existing Property</h5>
+                                <p>Renovation/extension</p>
+                            </div>
+                        </div>
+                        <input type="hidden" id="plotStatus" name="plotStatus" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="plotSize">Approximate Plot Size (in sq ft)</label>
+                        <select id="plotSize" name="plotSize" required>
+                            <option value="">Select plot size range</option>
+                            <option value="500">Up to 500 sq ft</option>
+                            <option value="1000">500 - 1,000 sq ft</option>
+                            <option value="2000" selected>1,000 - 2,000 sq ft</option>
+                            <option value="5000">2,000 - 5,000 sq ft</option>
+                            <option value="10000">5,000 - 10,000 sq ft</option>
+                            <option value="10000+">Above 10,000 sq ft</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="floorsCount">Number of Floors Planned</label>
+                        <select id="floorsCount" name="floorsCount" required>
+                            <option value="1">Ground + 1 Floor</option>
+                            <option value="2" selected>Ground + 2 Floors</option>
+                            <option value="3">Ground + 3 Floors</option>
+                            <option value="4">Ground + 4 Floors</option>
+                            <option value="5">Ground + 5 Floors</option>
+                            <option value="5+">More than 5 floors</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-navigation">
+                        <button type="button" class="btn btn-primary prev-step" data-prev="step1">
+                            <i class="fas fa-arrow-left"></i> Back
+                        </button>
+                        <button type="button" class="btn next-step" data-next="step3">Next: Requirements <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                
+                <!-- Step 3: Requirements -->
+                <div class="form-step" id="step3">
+                    <h4>Project Requirements & Preferences</h4>
+                    <p>Help us understand your specific needs</p>
+                    
+                    <div class="form-group">
+                        <label for="city">City / Location</label>
+                        <input type="text" id="city" name="city" placeholder="e.g., Mumbai, Delhi, Bangalore" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="budget">Approximate Budget Range (₹)</label>
+                        <select id="budget" name="budget">
+                            <option value="">Not sure / Need consultation</option>
+                            <option value="20">10-20 Lakhs</option>
+                            <option value="50">20-50 Lakhs</option>
+                            <option value="100">50 Lakhs - 1 Crore</option>
+                            <option value="200">1-2 Crores</option>
+                            <option value="500">2-5 Crores</option>
+                            <option value="500+">Above 5 Crores</option>
+                        </select>
+                    </div>
+                    
+                    <div class="smart-options" style="margin: 30px 0;">
+                        <h4><i class="fas fa-home-automation"></i> Smart Home Features (Optional)</h4>
+                        <p>Select any smart features you're interested in:</p>
+                        
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="modalSmartLights" name="smartLights" value="yes">
+                                <label for="modalSmartLights">Smart Lighting System</label>
+                            </div>
+                            
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="modalSmartFans" name="smartFans" value="yes">
+                                <label for="modalSmartFans">Smart Fans & AC Control</label>
+                            </div>
+                            
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="modalSmartLocks" name="smartLocks" value="yes">
+                                <label for="modalSmartLocks">Automatic Door Locks</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="timeline">Preferred Timeline</label>
+                        <select id="timeline" name="timeline">
+                            <option value="">Flexible / Not sure</option>
+                            <option value="3">Within 3 months</option>
+                            <option value="6">Within 6 months</option>
+                            <option value="12">Within 12 months</option>
+                            <option value="24">Within 24 months</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-navigation">
+                        <button type="button" class="btn btn-primary prev-step" data-prev="step2">
+                            <i class="fas fa-arrow-left"></i> Back
+                        </button>
+                        <button type="button" class="btn next-step" data-next="step4">Next: Contact Info <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                
+                <!-- Step 4: Contact Information -->
+                <div class="form-step" id="step4">
+                    <h4>Your Contact Information</h4>
+                    <p>We'll use this to contact you and share your project details</p>
+                    
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your 10-digit mobile number" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Additional Notes (Optional)</label>
+                        <textarea id="message" name="message" placeholder="Any specific requirements or questions you have..." rows="3"></textarea>
+                    </div>
+                    
+                    <div class="form-navigation">
+                        <button type="button" class="btn btn-primary prev-step" data-prev="step3">
+                            <i class="fas fa-arrow-left"></i> Back
+                        </button>
+                        <button type="submit" class="btn" id="submitProjectBtn">
+                            <i class="fas fa-paper-plane"></i> Submit Project Enquiry
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>Fastsewa Construction</h3>
+                    <p>Project-based construction management with transparent processes, guided workflows, and professional execution.</p>
+                    <div style="margin-top: 20px;">
+                        <a href="#" style="margin-right: 15px;"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" style="margin-right: 15px;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" style="margin-right: 15px;"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" style="margin-right: 15px;"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Project Types</h3>
+                    <ul>
+                        <li><a href="index.html">Main Page</a></li>
+                        <li><a href="#">New Home Construction</a></li>
+                        <li><a href="#">Commercial Construction</a></li>
+                        <li><a href="#">Renovation & Extension</a></li>
+                        <li><a href="#">Industrial Construction</a></li>
+                        <li><a href="#">Interior Design</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Our Process</h3>
+                    <ul>
+                        <li><a href="#process">Enquiry & Assessment</a></li>
+                        <li><a href="#process">Site Visit</a></li>
+                        <li><a href="#process">Design & Planning</a></li>
+                        <li><a href="#process">Estimation</a></li>
+                        <li><a href="#process">Execution</a></li>
+                        <li><a href="#process">Handover</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i> B Hub, Gandhi Maidan, Patna</li>
+                        <li><i class="fas fa-phone" style="margin-right: 10px;"></i> +91 8275723755</li>
+                        <li><i class="fas fa-envelope" style="margin-right: 10px;"></i> projects@fastsewaconstruction.com</li>
+                        <li><i class="fas fa-clock" style="margin-right: 10px;"></i> Mon-Sat: 9AM-7PM</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Fastsewa Construction. All Rights Reserved. | Fastsewa Construction</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Generate Project ID
+        function generateProjectId() {
+            const prefix = 'PROJ-FS';
+            const year = new Date().getFullYear();
+            const randomNum = Math.floor(1000 + Math.random() * 9000);
+            return `${prefix}-${year}-${randomNum}`;
+        }
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            
+            const icon = mobileMenuBtn.querySelector('i');
+            if (navMenu.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+        
+        // Close mobile menu when clicking on a link
+        const navLinks = document.querySelectorAll('.nav-menu a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Project Form Modal
+        const projectModal = document.getElementById('projectModal');
+        const startProjectBtn = document.getElementById('startProjectBtn');
+        const startProjectBtns = document.querySelectorAll('.start-project-btn');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+        const projectForm = document.getElementById('projectForm');
+        
+        // Open modal
+        startProjectBtn.addEventListener('click', () => {
+            projectModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        startProjectBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                projectModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                
+                // Set project type if button has data attribute
+                const projectType = btn.getAttribute('data-project-type');
+                if(projectType) {
+                    const option = document.querySelector(`.form-option[data-value="${projectType}"]`);
+                    if(option) {
+                        // Remove previous selection
+                        document.querySelectorAll('.form-option').forEach(opt => {
+                            opt.classList.remove('selected');
+                        });
+                        
+                        // Select this option
+                        option.classList.add('selected');
+                        document.getElementById('projectType').value = projectType;
+                    }
+                }
+            });
+        });
+        
+        // Close modal
+        closeModalBtn.addEventListener('click', () => {
+            projectModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            resetForm();
+        });
+        
+        // Close modal when clicking outside
+        projectModal.addEventListener('click', (e) => {
+            if(e.target === projectModal) {
+                projectModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+                resetForm();
+            }
+        });
+        
+        // Form option selection
+        document.querySelectorAll('.form-option').forEach(option => {
+            option.addEventListener('click', () => {
+                // Remove previous selection
+                document.querySelectorAll('.form-option').forEach(opt => {
+                    opt.classList.remove('selected');
+                });
+                
+                // Select this option
+                option.classList.add('selected');
+                document.getElementById('projectType').value = option.getAttribute('data-value');
+            });
+        });
+        
+        // Form step navigation
+        let currentStep = 1;
+        const totalSteps = 4;
+        
+        document.querySelectorAll('.next-step').forEach(button => {
+            button.addEventListener('click', () => {
+                const nextStep = button.getAttribute('data-next');
+                
+                // Validate current step before proceeding
+                if(validateStep(currentStep)) {
+                    // Update step indicators
+                    document.getElementById(`step${currentStep}Indicator`).classList.add('completed');
+                    document.getElementById(`step${currentStep}Indicator`).classList.remove('active');
+                    
+                    // Hide current step
+                    document.getElementById(`step${currentStep}`).classList.remove('active');
+                    
+                    // Show next step
+                    const nextStepNum = parseInt(nextStep.replace('step', ''));
+                    currentStep = nextStepNum;
+                    
+                    document.getElementById(nextStep).classList.add('active');
+                    document.getElementById(`step${currentStep}Indicator`).classList.add('active');
+                    
+                    // Update step indicator for next step
+                    if(currentStep > 1) {
+                        document.getElementById(`step${currentStep-1}Indicator`).classList.add('completed');
+                    }
+                }
+            });
+        });
+        
+        document.querySelectorAll('.prev-step').forEach(button => {
+            button.addEventListener('click', () => {
+                const prevStep = button.getAttribute('data-prev');
+                
+                // Update step indicators
+                document.getElementById(`step${currentStep}Indicator`).classList.remove('active');
+                
+                // Hide current step
+                document.getElementById(`step${currentStep}`).classList.remove('active');
+                
+                // Show previous step
+                const prevStepNum = parseInt(prevStep.replace('step', ''));
+                currentStep = prevStepNum;
+                
+                document.getElementById(prevStep).classList.add('active');
+                document.getElementById(`step${currentStep}Indicator`).classList.add('active');
+            });
+        });
+        
+        // Form validation for each step
+        function validateStep(step) {
+            switch(step) {
+                case 1:
+                    const projectType = document.getElementById('projectType').value;
+                    if(!projectType) {
+                        alert('Please select a project type');
+                        return false;
+                    }
+                    return true;
+                    
+                case 2:
+                    const plotStatus = document.getElementById('plotStatus').value;
+                    const plotSize = document.getElementById('plotSize').value;
+                    const floorsCount = document.getElementById('floorsCount').value;
+                    
+                    if(!plotStatus || !plotSize || !floorsCount) {
+                        alert('Please fill all plot details');
+                        return false;
+                    }
+                    return true;
+                    
+                case 3:
+                    const city = document.getElementById('city').value;
+                    if(!city) {
+                        alert('Please enter your city/location');
+                        return false;
+                    }
+                    return true;
+                    
+                case 4:
+                    const fullName = document.getElementById('fullName').value;
+                    const email = document.getElementById('email').value;
+                    const phone = document.getElementById('phone').value;
+                    
+                    if(!fullName || !email || !phone) {
+                        alert('Please fill all contact information');
+                        return false;
+                    }
+                    
+                    // Simple phone validation
+                    if(phone.length < 10) {
+                        alert('Please enter a valid 10-digit phone number');
+                        return false;
+                    }
+                    return true;
+                    
+                default:
+                    return true;
+            }
+        }
+        
+        // Plot status selection
+        document.querySelectorAll('#step2 .form-option').forEach(option => {
+            option.addEventListener('click', () => {
+                // Remove previous selection
+                document.querySelectorAll('#step2 .form-option').forEach(opt => {
+                    opt.classList.remove('selected');
+                });
+                
+                // Select this option
+                option.classList.add('selected');
+                document.getElementById('plotStatus').value = option.getAttribute('data-value');
+            });
+        });
+        
+        // Form submission
+        projectForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            if(validateStep(4)) {
+                // Generate project ID
+                const projectId = generateProjectId();
+                
+                // Get form data
+                const formData = {
+                    projectId: projectId,
+                    projectType: document.getElementById('projectType').value,
+                    plotStatus: document.getElementById('plotStatus').value,
+                    plotSize: document.getElementById('plotSize').value,
+                    floorsCount: document.getElementById('floorsCount').value,
+                    city: document.getElementById('city').value,
+                    budget: document.getElementById('budget').value,
+                    timeline: document.getElementById('timeline').value,
+                    smartLights: document.getElementById('modalSmartLights').checked ? 'Yes' : 'No',
+                    smartFans: document.getElementById('modalSmartFans').checked ? 'Yes' : 'No',
+                    smartLocks: document.getElementById('modalSmartLocks').checked ? 'Yes' : 'No',
+                    fullName: document.getElementById('fullName').value,
+                    email: document.getElementById('email').value,
+                    phone: document.getElementById('phone').value,
+                    message: document.getElementById('message').value,
+                    status: 'Enquiry Received',
+                    submissionDate: new Date().toLocaleDateString()
+                };
+                
+                // Show success message
+                alert(`✅ Project Enquiry Submitted Successfully!\n\nYour Project ID: ${projectId}\nStatus: Enquiry Received\n\nWe will contact you within 24 hours to discuss your project.\n\nAn enquiry PDF has been generated with your project details.`);
+                
+                // In a real application, you would:
+                // 1. Send data to server
+                // 2. Generate PDF with project details
+                // 3. Send confirmation email
+                
+                // Close modal and reset form
+                projectModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+                resetForm();
+            }
+        });
+        
+        // Reset form function
+        function resetForm() {
+            // Reset all steps
+            currentStep = 1;
+            
+            // Hide all steps except first
+            document.querySelectorAll('.form-step').forEach(step => {
+                step.classList.remove('active');
+            });
+            document.getElementById('step1').classList.add('active');
+            
+            // Reset step indicators
+            for(let i = 1; i <= totalSteps; i++) {
+                const indicator = document.getElementById(`step${i}Indicator`);
+                indicator.classList.remove('active', 'completed');
+            }
+            document.getElementById('step1Indicator').classList.add('active');
+            
+            // Reset form selections
+            document.querySelectorAll('.form-option').forEach(opt => {
+                opt.classList.remove('selected');
+            });
+            
+            // Clear form inputs
+            projectForm.reset();
+        }
+        
+        // Cost Calculator
+        const calculateCostBtn = document.getElementById('calculateCostBtn');
+        const costResults = document.getElementById('costResults');
+        
+        calculateCostBtn.addEventListener('click', () => {
+            // Get input values
+            const plotArea = parseInt(document.getElementById('plotArea').value) || 1000;
+            const floors = parseInt(document.getElementById('floors').value) || 2;
+            const constructionType = document.getElementById('constructionType').value;
+            
+            // Calculate construction area (80% of plot area * floors)
+            const constructionArea = Math.floor(plotArea * 0.8 * floors);
+            
+            // Cost per sq ft based on construction type
+            let costPerSqFtMin, costPerSqFtMax;
+            
+            switch(constructionType) {
+                case 'economy':
+                    costPerSqFtMin = 1200;
+                    costPerSqFtMax = 1500;
+                    break;
+                case 'standard':
+                    costPerSqFtMin = 1500;
+                    costPerSqFtMax = 2000;
+                    break;
+                case 'premium':
+                    costPerSqFtMin = 2000;
+                    costPerSqFtMax = 2800;
+                    break;
+                case 'luxury':
+                    costPerSqFtMin = 2800;
+                    costPerSqFtMax = 4000;
+                    break;
+                default:
+                    costPerSqFtMin = 1500;
+                    costPerSqFtMax = 2000;
+            }
+            
+            // Calculate basic construction cost
+            const basicCostMin = constructionArea * costPerSqFtMin;
+            const basicCostMax = constructionArea * costPerSqFtMax;
+            
+            // Calculate smart features cost
+            let smartCost = 0;
+            const smartFeatures = [
+                document.getElementById('smartLights'),
+                document.getElementById('smartFans'),
+                document.getElementById('smartLocks'),
+                document.getElementById('smartSecurity'),
+                document.getElementById('smartCurtains'),
+                document.getElementById('smartHub')
+            ];
+            
+            const checkedFeatures = smartFeatures.filter(feature => feature.checked);
+            smartCost = checkedFeatures.length * 50000; // ₹50,000 per feature
+            
+            // Calculate additional costs (20% of basic)
+            const additionalCostMin = basicCostMin * 0.2;
+            const additionalCostMax = basicCostMax * 0.2;
+            
+            // Calculate total cost range
+            const totalCostMin = basicCostMin + smartCost + additionalCostMin;
+            const totalCostMax = basicCostMax + smartCost + additionalCostMax;
+            
+            // Format numbers with commas
+            function formatNumber(num) {
+                return '₹' + num.toLocaleString('en-IN');
+            }
+            
+            function formatNumberRange(min, max) {
+                return `${formatNumber(min)} - ${formatNumber(max)}`;
+            }
+            
+            // Update results
+            document.getElementById('resultArea').textContent = constructionArea.toLocaleString() + ' sq ft';
+            document.getElementById('resultRate').textContent = `₹${costPerSqFtMin.toLocaleString()} - ₹${costPerSqFtMax.toLocaleString()}`;
+            document.getElementById('resultBasic').textContent = formatNumberRange(basicCostMin, basicCostMax);
+            document.getElementById('resultSmart').textContent = formatNumber(smartCost);
+            document.getElementById('resultAdditional').textContent = formatNumberRange(additionalCostMin, additionalCostMax);
+            document.getElementById('resultTotal').textContent = formatNumberRange(totalCostMin, totalCostMax);
+            
+            // Show results
+            costResults.style.display = 'block';
+            
+            // Scroll to results
+            costResults.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+        
+        // Add scroll effect to header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.1)';
+            }
+        });
+    </script>
+</body>
+</html>
