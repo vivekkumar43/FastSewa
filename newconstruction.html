@@ -6,6 +6,7 @@
     <title>Fastsewa Construction - Project-Based Construction Solutions</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="chatbot.css">
     <style>
         /* Reset and Base Styles */
         * {
@@ -1500,7 +1501,45 @@
             </div>
         </div>
     </footer>
+    <!-- ==================== -->
+<!-- FASTSEWA CHATBOT HTML -->
+<!-- ==================== -->
+<button class="fastsewa-chatbot-toggle" id="fastsewaChatbotToggle">
+    <i class="fas fa-headset"></i>
+    <span class="notification-badge">1</span>
+</button>
 
+<div class="fastsewa-chatbot-container" id="fastsewaChatbotContainer">
+    <!-- Header -->
+    <div class="fastsewa-chatbot-header">
+        <div class="chatbot-header-content">
+            <div class="chatbot-avatar">
+                <i class="fas fa-robot"></i>
+            </div>
+            <div>
+                <h3>FastSewa Assistant</h3>
+                <p>AI Support for 6 Services</p>
+            </div>
+        </div>
+        <button class="chatbot-close-btn" id="chatbotCloseBtn">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+
+    <!-- Messages Container -->
+    <div class="fastsewa-chatbot-body" id="chatbotMessages">
+        <!-- Initial message will appear here -->
+    </div>
+
+    <!-- Input Area -->
+    <div class="fastsewa-chatbot-footer">
+        <input type="text" id="chatbotInput" placeholder="Ask about our services...">
+        <button id="chatbotSendBtn">
+            <i class="fas fa-paper-plane"></i>
+        </button>
+    </div>
+</div>
+<script src="chatbot.js"></script>
     <script>
         // Generate Project ID
         function generateProjectId() {
@@ -1911,5 +1950,6 @@
 </body>
 
 </html>
+
 
 
