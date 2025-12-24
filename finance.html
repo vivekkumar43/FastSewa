@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FastSewa Finance Assistant</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Main site styles (jo already use kar rahe ho) -->
+  <link rel="stylesheet" href="../services/css/finance.css" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body class="finance-body">
+  <!-- Top hero section -->
+  <header class="finance-hero">
+    <div class="finance-hero-inner">
+      <div class="hero-left">
+        <span class="badge-pill">
+          <i class="fas fa-wallet"></i>
+          New Service · Finance Assistant
+        </span>
+        <h1>Personal Finance Assistant for Everyday Decisions</h1>
+        <p>
+          Get a dedicated finance assistant to help you plan monthly budgets, EMIs,
+          savings goals and prepare for tax season – all in simple language, not
+          complicated finance jargon.
+        </p>
+
+        <div class="hero-points">
+          <div class="point">
+            <i class="fas fa-rupee-sign"></i>
+            <span>Understand where your money is going every month.</span>
+          </div>
+          <div class="point">
+            <i class="fas fa-chart-line"></i>
+            <span>Create practical savings & investment plans.</span>
+          </div>
+          <div class="point">
+            <i class="fas fa-file-invoice"></i>
+            <span>Stay prepared for EMIs, bills and taxes.</span>
+          </div>
+        </div>
+
+        <div class="hero-cta">
+          <button class="btn-primary" onclick="document.getElementById('financeForm').scrollIntoView({behavior:'smooth'});">
+            Book Free Finance Session
+          </button>
+          <span class="hero-note">
+            <i class="fas fa-check-circle"></i>
+            First consultation is completely free.
+          </span>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="money-card">
+          <div class="money-header">
+            <span>Monthly Snapshot</span>
+            <strong>Smart Budget Preview</strong>
+          </div>
+          <ul>
+            <li>
+              <span>Income</span>
+              <strong>₹ 60,000</strong>
+            </li>
+            <li>
+              <span>Planned Expenses</span>
+              <strong>₹ 42,500</strong>
+            </li>
+            <li>
+              <span>Potential Savings</span>
+              <strong class="positive">₹ 17,500</strong>
+            </li>
+          </ul>
+          <p class="money-foot">
+            Your real plan will be customised after a quick 15‑minute call.
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main class="finance-main">
+    <div class="finance-grid">
+      <!-- Left column: What you get -->
+      <section class="finance-section">
+        <h2>Where Finance Assistant Helps You</h2>
+
+        <div class="feature-grid">
+          <div class="feature-card">
+            <i class="fas fa-list-check"></i>
+            <h3>Monthly Budget Plan</h3>
+            <p>Create a realistic budget for rent, groceries, EMIs, education, and lifestyle – not a spreadsheet you never open.</p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-credit-card"></i>
+            <h3>Loan & EMI Planning</h3>
+            <p>Understand how much EMI you can safely afford and how to clear loans faster without breaking your monthly cash‑flow.</p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-piggy-bank"></i>
+            <h3>Savings & Goals</h3>
+            <p>Set saving goals for emergency fund, travel, marriage, home or higher studies with clear monthly targets.</p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-receipt"></i>
+            <h3>Tax Season Ready</h3>
+            <p>Get a checklist of documents, investments and deadlines so that tax filing never becomes last‑minute panic.</p>
+          </div>
+        </div>
+
+        <div class="how-it-works">
+          <h2>How It Works</h2>
+          <ol>
+            <li>Fill the quick form with your income, expenses and main goal.</li>
+            <li>Our finance assistant analyses your inputs and prepares a draft plan.</li>
+            <li>You get a call / WhatsApp with personalised suggestions and next steps.</li>
+          </ol>
+          <p class="disclaimer">
+            <strong>Note:</strong> This is a basic financial guidance service. It is not a substitute for SEBI‑registered investment advisory or professional tax consultancy.
+          </p>
+        </div>
+      </section>
+
+      <!-- Right column: Form -->
+      <section class="finance-section form-section">
+        <h2>Request Your Finance Assistant</h2>
+        <p class="section-subtitle">
+          Share a few details so we can prepare a personalised budget & savings plan
+          before contacting you.
+        </p>
+
+        <form id="financeForm" class="finance-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullName">Full Name</label>
+              <input id="fullName" name="fullName" type="text" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" required />
+            </div>
+            <div class="form-group">
+              <label for="goalType">Primary Financial Goal</label>
+              <select id="goalType" name="goalType" required>
+                <option value="">Select goal</option>
+                <option value="budget">Control monthly spending</option>
+                <option value="emi">Plan EMIs / loan</option>
+                <option value="savings">Increase savings</option>
+                <option value="investment">Start basic investments</option>
+                <option value="tax">Plan for tax season</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="monthlyIncome">Approx Monthly Income (₹)</label>
+              <input id="monthlyIncome" name="monthlyIncome" type="number" min="0" required />
+            </div>
+            <div class="form-group">
+              <label for="monthlyExpense">Approx Monthly Expenses (₹)</label>
+              <input id="monthlyExpense" name="monthlyExpense" type="number" min="0" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="notes">Anything specific we should know?</label>
+            <textarea id="notes" name="notes" rows="3"
+              placeholder="Example: Existing home loan, credit card dues, upcoming big purchase, etc."></textarea>
+          </div>
+
+          <button id="financeSubmit" type="submit" class="btn-primary full-width">
+            Submit Request
+          </button>
+
+          <p id="financeStatus" class="form-status" aria-live="polite"></p>
+
+          <div class="after-submit-actions" id="financeActions" style="display:none;">
+            <button type="button" class="btn-secondary" id="goToDashboard">
+              Go to My Dashboard
+            </button>
+            <button type="button" class="btn-outline" id="newFinanceRequest">
+              Submit Another Request
+            </button>
+          </div>
+        </form>
+
+        <div class="small-note">
+          <i class="fas fa-lock"></i>
+          Your income & expense details are kept private and used only to prepare your plan.
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="../assets/js/booking-storage.js"></script>
+  <script src="../assets/js/finance.js"></script>
+</body>
+</html>
