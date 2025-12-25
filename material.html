@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FastSewa - Material Suppliers Marketplace</title>
+    <link rel="stylesheet" href="material.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div>
+                    <div class="logo">FastSewa</div>
+                    <div class="tagline">Connect with trusted material suppliers</div>
+                </div>
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search suppliers or materials..." />
+                    <button class="search-btn" onclick="searchSuppliers()">Search</button>
+                </div>
+            </div>
+        </header>
+
+        <div class="filters">
+            <div class="filter-group">
+                <label>Category:</label>
+                <select id="categoryFilter" onchange="filterSuppliers()">
+                    <option value="all">All Categories</option>
+                    <option value="construction">Construction Materials</option>
+                    <option value="electrical">Electrical Supplies</option>
+                    <option value="plumbing">Plumbing Materials</option>
+                    <option value="painting">Painting Supplies</option>
+                    <option value="hardware">Hardware & Tools</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label>Location:</label>
+                <select id="locationFilter" onchange="filterSuppliers()">
+                    <option value="all">All Locations</option>
+                    <option value="delhi">Delhi</option>
+                    <option value="mumbai">Mumbai</option>
+                    <option value="bangalore">Bangalore</option>
+                    <option value="pune">Pune</option>
+                    <option value="hyderabad">Hyderabad</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label>Sort by:</label>
+                <select id="sortFilter" onchange="filterSuppliers()">
+                    <option value="rating">Highest Rated</option>
+                    <option value="orders">Most Orders</option>
+                    <option value="name">Name (A-Z)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="suppliers-grid" id="suppliersGrid"></div>
+
+        <div class="stats-bar">
+            <div class="stat-item">
+                <div class="stat-number" id="supplierCount">500+</div>
+                <div class="stat-label">Verified Suppliers</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">10k+</div>
+                <div class="stat-label">Happy Customers</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">50k+</div>
+                <div class="stat-label">Orders Completed</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">4.8★</div>
+                <div class="stat-label">Average Rating</div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-title">Get in Touch</div>
+                <div class="footer-subtitle">
+                    Fill out the form below and we'll connect you with the right supplier
+                </div>
+
+                <div class="success-message" id="successMessage">
+                    ✓ Thank you! Your inquiry has been submitted successfully.
+                </div>
+
+                <form id="contactForm" onsubmit="handleSubmit(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Your Name *</label>
+                            <input type="text" name="name" required />
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number *</label>
+                            <input type="tel" name="phone" required />
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Email *</label>
+                            <input type="email" name="email" required />
+                        </div>
+                        <div class="form-group">
+                            <label>Material Category *</label>
+                            <select name="category" required>
+                                <option value="">Select</option>
+                                <option value="construction">Construction</option>
+                                <option value="electrical">Electrical</option>
+                                <option value="plumbing">Plumbing</option>
+                                <option value="painting">Painting</option>
+                                <option value="hardware">Hardware</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Location *</label>
+                        <input type="text" name="location" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Message *</label>
+                        <textarea name="message" required></textarea>
+                    </div>
+
+                    <button class="submit-btn">Submit Inquiry</button>
+                </form>
+
+                <div class="footer-bottom">
+                    © 2024 FastSewa. All rights reserved.
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div class="modal" id="contactModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Contact Supplier</h2>
+                <button class="close-btn" onclick="closeModal()">&times;</button>
+            </div>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="material.js"></script>
+</body>
+</html>
