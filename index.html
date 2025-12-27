@@ -21,6 +21,7 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="#why-choose">About</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="#" class="btn-nav hide-mobile">Login/Signup</a></li>
                 <li><a href="#contact" class="btn-nav hide-mobile">Get Started</a></li>
             </ul>
             <div class="hamburger">
@@ -32,73 +33,104 @@
     </nav>
 
     <header id="home" class="hero">
-        <div class="container hero-content reveal">
-            <h1>FastSewa Super Portal</h1>
+        <div class="hero-slideshow">
+    <!-- Slide 1: Construction Service -->
+    <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
+    
+    <!-- Slide 2: Security Service -->
+    <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
+    
+    <!-- Slide 3: Medical Service -->
+    <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1516549655669-df6654e435f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
+    
+    <!-- Slide 4: Legal Service -->
+    <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
+    
+    <!-- Slide 5: Repair Service -->
+    <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
+</div>
+        <div class="hero-content">
+            <h1 class="reveal">FastSewa Super Portal</h1>
             <h2>9 Essential Services, One Platform</h2>
-            <p>Your trusted partner for construction, security, legal services, healthcare, land verification, and maintenance solutions.</p>
-            <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary">Get Started</a>
-                <a href="#services" class="btn btn-outline">Learn More</a>
-            </div>
+            <p class="reveal">Your One-Stop Solution for Construction, Security, Legal, Medical, Land Verification, Repair, Finance, Material Supply, and Support Services.</p>
+            <a href="#services" class="btn btn-primary reveal">Explore Services</a>
+            <a href="#contact" class="btn btn-primary">Get Started</a>
         </div>
     </header>
+    <div class="hero-controls">
+    <button class="hero-nav-btn" id="prev-hero-slide">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+    
+    <div class="hero-dots">
+        <div class="hero-dot active" data-slide="0"></div>
+        <div class="hero-dot" data-slide="1"></div>
+        <div class="hero-dot" data-slide="2"></div>
+        <div class="hero-dot" data-slide="3"></div>
+        <div class="hero-dot" data-slide="4"></div>
+    </div>
+    
+    <button class="hero-nav-btn" id="next-hero-slide">
+        <i class="fas fa-chevron-right"></i>
+    </button>
+</div>
 
     <section id="services" class="section-pad">
         <div class="container">
             <h2 class="section-title reveal">Our Services</h2>
             <div class="grid-3">
-                <div class="service-card reveal">
+                <div class="service-card reveal"onclick="location.href='newconstruction.html';" style="cursor: pointer;">
                     <div class="icon-box"><i class="fas fa-building"></i></div>
                     <h3>Construction – FastSewa BuildNet</h3>
                     <p>Complete house, renovation & commercial construction solutions.</p>
                     <a href="newconstruction.html" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="service-card reveal">
+                <div class="service-card reveal"onclick="location.href='security.html';" style="cursor: pointer;">
                     <div class="icon-box"><i class="fas fa-user-shield"></i></div>
                     <h3>Security Guard – FastSewa SecureForce</h3>
                     <p>Professional trained security guards for all requirements.</p>
                     <a href="security.html" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="service-card reveal">
+                <div class="service-card reveal"onclick="location.href='legal.html';" style="cursor: pointer;">
                     <div class="icon-box"><i class="fas fa-gavel"></i></div>
-                    <h3>Legal & GST – FastSewa Filings</h3><
+                    <h3>Legal & GST – FastSewa Filings</h3>
                     <p>GST, tax, legal filings and documentation services.</p>
                     <a href="legal.html" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="service-card reveal">
+                <div class="service-card reveal"onclick="location.href='medical.html';" style="cursor: pointer;">
                     <div class="icon-box"><i class="fas fa-heartbeat"></i></div>
                     <h3>Medical Services</h3>
                     <p>Doctors, nurses, and health assistance at your doorstep.</p>
                     <a href="medical.html" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="service-card reveal">
+                <div class="service-card reveal"onclick="location.href='land.html';" style="cursor: pointer;">
                     <div class="icon-box"><i class="fas fa-map-marked-alt"></i></div>
                     <h3>Land Verification</h3>
                     <p>Land record check and property document verification.</p>
                     <a href="land.html" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="service-card reveal">
+                <div class="service-card reveal"onclick="location.href='repair.html';" style="cursor: pointer;">
                     <div class="icon-box"><i class="fas fa-tools"></i></div>
                     <h3>Repair & Maintenance</h3>
                     <p>All home and office repair services by experts.</p>
                     <a href="repair.html" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="service-card reveal">
+                <div class="service-card reveal"onclick="location.href='finance.html';" style="cursor: pointer;">
                 <div class="service-icon"><i class="fas fa-wallet"></i></div>
                 <h3>Finance Assistant</h3>
                 <p>Personal budgeting, EMI planning, and savings guidance.</p>
                 <a href="finance.html" class="service-link">
                     Learn More →
-                </a>
+                </a></a>
             </div>
-                <div class="service-card reveal">
+                <div class="service-card reveal"onclick="location.href='material.html';" style="cursor: pointer;">
     <div class="icon-box"><i class="fas fa-truck-loading"></i></div>
     <h3>Material Suppliers</h3>
     <p>High-quality construction materials delivered directly to your site.</p>
     <a href="material.html" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
 </div>
-                <div class="service-card reveal">
-    <div class="icon-box"><i class="fas fa-headset"></i></div>
+               <div class="service-card reveal"onclick="location.href='support1.html';" style="cursor: pointer;">
+     <div class="icon-box"><i class="fas fa-headset"></i></div>
     <h3>Support & Solutions</h3>
     <p>Dedicated 24/7 customer assistance and expert technical problem-solving.</p>
     <a href="support1.html" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
@@ -171,7 +203,7 @@
         </div>
     </section>
 
-    <section id="contact" class="contact-section">
+    <!-- <section id="contact" class="contact-section">
         <div class="container">
             <h2 class="section-title text-white reveal">Contact Us</h2>
             <p class="section-subtitle text-white reveal" style="margin-bottom: 3rem;">Get a free initial consultation for your business.</p>
@@ -218,8 +250,6 @@
                                 <option value="medical">Medical Services</option>
                                 <option value="land">Land Verification</option>
                                 <option value="repair">Repair & Maintenance</option>
-                                <option value="medical">Finance services</option>
-                                <option value="medical">Mateial Supplier</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -237,7 +267,169 @@
         <div class="container">
             <p>&copy; 2024 FastSewa Super Portal. All rights reserved.</p>
         </div>
-    </footer>
+    </footer> -->
+
+
+
+
+
+
+
+    <!-- ================= CONTACT ================= -->
+<section id="contact" class="contact-section">
+    <div class="container">
+        <h2 class="section-title text-white">Contact Us</h2>
+        <p class="section-subtitle text-white">Get a free initial consultation</p>
+
+        <div class="contact-wrapper">
+
+            <!-- INFO -->
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p><i class="fas fa-map-marker-alt"></i> B Hub, Gandhi Maidan, Patna, Bihar</p>
+                <p><i class="fas fa-phone-alt"></i> +91 8275723755</p>
+                <p><i class="fas fa-envelope"></i> fastsewa2020@gmail.com</p>
+            </div>
+
+            <!-- FORM -->
+            <div class="contact-form-box">
+                <form id="contactForm">
+
+                    <div class="form-group">
+                        <input type="text" name="name" id="name" required>
+                        <label>Your Name</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" name="email" id="email" required>
+                        <label>Your Email</label>
+                    </div>
+
+                    <div class="form-group">
+                        <select name="title" id="service" required>
+                            <option value="">Select Service</option>
+                            <option value="Construction">Construction</option>
+                            <option value="Security Guard">Security Guard</option>
+                            <option value="Legal & GST">Legal & GST</option>
+                            <option value="Medical Services">Medical Services</option>
+                            <option value="Land Verification">Land Verification</option>
+                            <option value="Repair & Maintenance">Repair & Maintenance</option>
+                            <option value="Finance Assistant">Finance Assistant</option>
+                            <option value="Material Suppliers">Material Suppliers</option>
+                            <option value="Other Services">Other Services</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea name="message" id="message" rows="4" required></textarea>
+                        <label>Brief description of your issue</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-block">Send Message</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<!-- <footer>
+    <div class="container">
+        <p>&copy; 2024 FastSewa Super Portal. All rights reserved.</p>
+    </div>
+</footer> -->
+
+
+
+
+<footer style="background: #111; color: #fff; padding: 40px 0 20px; font-family: sans-serif; clear: both;">
+    <div style="max-width: 1100px; margin: 0 auto; padding: 0 20px;">
+        <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; border-bottom: 1px solid #333; padding-bottom: 30px;">
+            
+            <div style="flex: 1; min-width: 250px;">
+                <h3 style="color: #ff5722; margin-bottom: 20px;">Our Office</h3>
+                <p style="font-size: 14px; color: #bbb;"><i class="fas fa-map-marker-alt" style="color:#ff5722; margin-right:10px;"></i> B Hub, Gandhi Maidan, Patna, Bihar</p>
+                <p style="font-size: 14px; color: #bbb;"><i class="fas fa-phone-alt" style="color:#ff5722; margin-right:10px;"></i> +91 8275723755</p>
+                <p style="font-size: 14px; color: #bbb;"><i class="fas fa-envelope" style="color:#ff5722; margin-right:10px;"></i> Fastsewa2020@gmail.com</p>
+            </div>
+
+            <div style="flex: 1; min-width: 250px; text-align: center;">
+                <h3 style="color: #ff5722; margin-bottom: 20px;">Connect With Us</h3>
+                <div style="display: flex; justify-content: center; gap: 15px;">
+                    <a href="https://www.facebook.com/fastsewa.20/" target="_blank" style="color: #fff; font-size: 20px;"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/fastsewa2020" target="_blank" style="color: #fff; font-size: 20px;"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/fastsewa-facilities-2a062b2a2/" target="_blank" style="color: #fff; font-size: 20px;"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+           <div style="flex: 1; min-width: 250px;">
+    <h3 style="color: #ff5722; margin-bottom: 20px; font-family: 'Poppins', sans-serif;">Live Statistics</h3>
+    <div style="background: #1a1a1a; padding: 20px; border-radius: 12px; border: 1px solid #333; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+        <p style="margin: 8px 0; font-size: 15px; color: #eee;">
+            Total Visitors: <span id="total-v" style="color: #ff5722; font-weight: 700; float: right;">--</span>
+        </p>
+        <p style="margin: 8px 0; font-size: 15px; color: #eee;">
+            Repeated Users: <span id="repeat-v" style="color: #ff5722; font-weight: 700; float: right;">--</span>
+        </p>
+        <div style="margin-top: 15px; padding-top: 10px; border-top: 1px solid #333; display: flex; align-items: center; justify-content: space-between;">
+            <span style="font-size: 14px; color: #22c55e; display: flex; align-items: center;">
+                <span class="live-dot"></span> Online Now
+            </span>
+            <span id="online-v" style="font-weight: 700; color: #22c55e;">--</span>
+        </div>
+    </div>
+</div>
+
+<style>
+.live-dot {
+    height: 8px; width: 8px; background: #22c55e; border-radius: 50%; 
+    margin-right: 8px; display: inline-block;
+    box-shadow: 0 0 8px #22c55e; animation: blink 1.5s infinite;
+}
+@keyframes blink { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; } }
+</style>
+
+        <div style="text-align: center; padding-top: 20px; font-size: 13px; color: #666;">
+            <p>&copy; 2024 FastSewa Super Portal. All rights reserved. | Developed by Team Nitish Kumar & Team Vivek Kumar</p>
+        </div>
+    </div>
+</footer>
+
+
+
+<!-- ================= EMAILJS ================= -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+(function () {
+    emailjs.init("82w8_I7wL3TeHxJa6"); // ✅ Public Key
+})();
+
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    emailjs.sendForm(
+        "service_ap93y7a",   // ✅ Service ID
+        "template_hvuzvq9",  // ✅ Template ID
+        this
+    ).then(
+        function () {
+            alert("✅ Message sent successfully!");
+            document.getElementById("contactForm").reset();
+        },
+        function (error) {
+            alert("❌ Message nahi gaya");
+            console.log(error);
+        }
+    );
+});
+</script>
+
+
+ 
+
+
 
 <!-- ==================== -->
 <!-- FASTSEWA CHATBOT HTML -->
